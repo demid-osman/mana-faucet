@@ -196,7 +196,7 @@ contract ManaFaucet {
      * Requirements:
      * - faucet must have MANA
      */
-    function transferMana(address _to, uint _amount) public onlyOwner() hasMana() {
+    function transferMana(address _to, uint _amount) private hasMana() {
         MANA.transfer(_to, _amount);
     }
 

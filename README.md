@@ -38,7 +38,7 @@ npm run build
 ## Resources
 [Website](https://mana-faucet.onrender.com/)
 [Documentation](https://demid.gitbook.io/mana-faucet/)
-[Contract](https://goerli.etherscan.io/address/0x0CFBDf8Bd10d9541AFc684D73447e29fD4f12a52)
+[Contract](https://goerli.etherscan.io/address/0xbaa3C8583B83401BC319777447Ea80ce23203072)
 
 ## License
 MIT
