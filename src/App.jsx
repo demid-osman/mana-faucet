@@ -123,17 +123,23 @@ function App() {
         }
       })
       window.ethereum.on("chainChanged", (chainId) => {
-        setChainId
+        setChainId(chainId)
         if (chainId != "0x5") {
+          console.log('chainId != goerli')
           setConnectBtnDisabled(true)
           setGetBtnDisabled(true)
           setChainId(0)
           setTxData(null)
         } else {
-          setGetBtnDisabled(false)
+          if (!address) {
+            setConnectBtnDisabled(false)
+            setGetBtnDisabled(true)
+          } else {
+            setConnectBtnDisabled(true)
+            setGetBtnDisabled(false)
+          }
           setChainId(5)
         }
-        console.log(chainId)
       })
     } else {
       alert("Please install MetaMask")
